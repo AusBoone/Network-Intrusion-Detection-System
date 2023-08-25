@@ -25,6 +25,10 @@ This project is designed to capture and analyze network packets on a given inter
 - `packet_analysis.c/h`: Analyzes the packets and delegates specific attack analysis to `attack_detection`.
 - `attack_detection.c/h`: Contains functions to analyze specific attack patterns and handle alerting.
 
+## Configuration
+
+You may need to adjust certain configurations such as SCAN_THRESHOLD and TIME_WINDOW in attack_detection.c to tune the sensitivity of the port scanning detection.
+
 ## How to Build
 
 1. Install the `libpcap` development package.
@@ -39,7 +43,3 @@ Replace <device> with the name of the network device you want to monitor (e.g., 
 
    ```bash
    ./packet_analyzer <device>
-
-## Configuration
-
-You may need to adjust certain configurations such as SCAN_THRESHOLD and TIME_WINDOW in attack_detection.c to tune the sensitivity of the port scanning detection.
